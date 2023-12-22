@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("snow (1980 x 1320).jpg");
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.website {
+    position: relative;
+    padding-top: 100px;
+    height: 100%;
+    width: 100%;
+    background-image: url("snow (1980 x 1320).jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.6);
+    opacity: 0;
+    transition: 1s;
+    box-shadow: 0 0 25px 1px gray;
+    z-index: 1;
+}
+
+.website.show {
+    transform: scale(0.8);
+    opacity: 1;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 400;
+    margin-bottom: -50px;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: auto;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.countdown-container .element {
+    width: 180px;
+    height: 120px;
+}
+.countdown-container .number {
+    font-size: 5em;
+    font-weight: 600;
+    margin-bottom: -20px;
+}
+
+@media (max-width: 426px) {
+    body {
+        margin-top: 50px;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
